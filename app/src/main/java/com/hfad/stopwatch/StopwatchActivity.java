@@ -18,18 +18,18 @@ public class StopwatchActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
         if (savedInstanceState != null) {
-            seconds = savedInstanceState.getInt("seconds");
-            running = savedInstanceState.getBoolean("running");
-            wasRunning = savedInstanceState.getBoolean("wasRunning");
+            /* TODO:  Use the Bundle get methods to restore the state
+                seconds, running and wasRunning instance variables
+            */
         }
         runTimer();
     }
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putInt("seconds", seconds);
-        savedInstanceState.putBoolean("running", running);
-        savedInstanceState.putBoolean("wasRunning", wasRunning);
+       /* TODO:  Use the Bundle put methods to save the state
+                seconds, running and wasRunning instance variables
+        */
     }
 
     @Override
