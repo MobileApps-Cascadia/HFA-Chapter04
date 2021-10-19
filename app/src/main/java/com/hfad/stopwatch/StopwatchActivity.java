@@ -3,12 +3,19 @@ package com.hfad.stopwatch;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;
 
 import java.util.Locale;
 
 public class StopwatchActivity extends Activity {
+    /* TODO: create KEY private final strings for use by savedInstanceState
+        for "seconds", "running", and "wasRunning"
+    (it doesn't really matter what these are so long as they are unique)
+ */
+    //private final String ...
+
     private int seconds = 0;
     private boolean running;
     private boolean wasRunning;
@@ -26,7 +33,7 @@ public class StopwatchActivity extends Activity {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
        /* TODO:  Use the Bundle put methods to save the state
                 seconds, running and wasRunning instance variables
         */
