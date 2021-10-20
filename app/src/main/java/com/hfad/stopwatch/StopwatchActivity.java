@@ -15,7 +15,9 @@ public class StopwatchActivity extends Activity {
     (it doesn't really matter what these are so long as they are unique)
  */
     //private final String ...
-
+    private final String SECONDS = "0";
+    private final String  RUNNING = "1";
+    private final String WASRUNNING = "2";
     private int seconds = 0;
     private boolean running;
     private boolean wasRunning;
@@ -27,7 +29,10 @@ public class StopwatchActivity extends Activity {
         if (savedInstanceState != null) {
             /* TODO:  Use the Bundle get methods to restore the state
                 seconds, running and wasRunning instance variables
-            */
+*/
+           seconds= savedInstanceState.getInt(SECONDS);
+    running = savedInstanceState.getBoolean(RUNNING);
+    wasRunning = savedInstanceState.getBoolean(WASRUNNING);
         }
         runTimer();
     }
@@ -37,6 +42,9 @@ public class StopwatchActivity extends Activity {
        /* TODO:  Use the Bundle put methods to save the state
                 seconds, running and wasRunning instance variables
         */
+        outState.putInt(SECONDS, seconds);
+        outState.putBoolean(RUNNING, running);
+        outState.putBoolean(WASRUNNING, wasRunning);
     }
 
     @Override
