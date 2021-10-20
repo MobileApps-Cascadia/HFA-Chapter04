@@ -15,9 +15,9 @@ public class StopwatchActivity extends Activity {
     (it doesn't really matter what these are so long as they are unique)
  */
     //private final String ...
-    private final String SECONDS = "0";
-    private final String  RUNNING = "1";
-    private final String WASRUNNING = "2";
+    private final String SECONDS = "seconds";
+    private final String  RUNNING = "runniung";
+    private final String WASRUNNING = "wasrunniung";
     private int seconds = 0;
     private boolean running;
     private boolean wasRunning;
